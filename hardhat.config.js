@@ -6,7 +6,11 @@ module.exports = {
   solidity: "0.8.17",
   networks:{
     goerli :{
-      url:process.env.INFURA_GOERLI_ENDPOINT,
+      url:process.env.ALCHEMY_GOERLI_ENDPOINT,
+      accounts: [process.env.PRIVATE_KEY]
+    },
+    polygon :{
+      url:process.env.ALCHEMY_MUMBAI_ENDPOINT,
       accounts: [process.env.PRIVATE_KEY]
     }
   }
